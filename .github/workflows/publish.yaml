@@ -4,6 +4,8 @@ on: push
 
 jobs:
   arch:
+    runs-on: ubuntu-latest
+
     container: archlinux:latest
 
     steps:
