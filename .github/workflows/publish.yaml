@@ -9,6 +9,8 @@ jobs:
     container: archlinux:latest
 
     steps:
-      - run: ls /
+      - uses: actions/checkout@v2
+
+      - run: ls
+      - run: pwd
       - run: whoami
-      - run: makepkg
