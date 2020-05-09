@@ -1,0 +1,12 @@
+name: publish
+
+on: push
+
+jobs:
+  arch:
+    container: archlinux:latest
+
+    steps:
+      - run: ls /
+      - run: whoami
+      - run: makepkg
