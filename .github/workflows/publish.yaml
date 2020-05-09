@@ -14,6 +14,9 @@ jobs:
       - run: ls
       - run: pwd
       - run: whoami
+      - run: |
+          pacman -Syu
+          pacman -S git openssh
 
       - run: 'mkdir ~/.ssh; echo "$SSH_KEY" > ~/.ssh/id_rsa'
         shell: bash
