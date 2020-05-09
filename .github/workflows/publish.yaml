@@ -14,3 +14,13 @@ jobs:
       - run: ls
       - run: pwd
       - run: whoami
+
+      - run: |
+        'mkdir ~/.ssh'
+        'echo "$SSH_KEY" > ~/.ssh/id_rsa'
+        shell: bash
+        env:
+          SSH_KEY: ${{ secrets.AUR_SSH_KEY }}
+
+      - run: 'cat ~/.ssh/id_rsa'
+        shell: bash
